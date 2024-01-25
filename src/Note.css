@@ -1,0 +1,84 @@
+/* Note.css */
+
+.note {
+  background-color: #282c35; /* Dark background color for dark mode */
+  border: 1px solid #444; /* Dark border color for dark mode */
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px); /* 25% width with 20px margin on each side for a 4-column layout */
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.note.dark-mode {
+  background-color: #ffffff;
+  border: 1px solid #444;
+}
+
+.note h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ddd; /* Light text color for title */
+}
+
+.note.dark-mode h1 {
+  color: #ddd;
+}
+
+
+.note p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #bbb; /* Slightly lighter text color for content */
+}
+
+.note.dark-mode p {
+  color: #bbb;
+}
+
+/* Adjust textarea styles */
+.note textarea,input {
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 14px;
+  color: #bbb; /* Slightly lighter text color for content */
+  background-color: transparent;
+  border: 1px solid #444;
+}
+ 
+.note.dark-mode textarea,input {
+  color: #bbb;
+  background-color: transparent;
+  border: 1px solid #444;
+}
+
+.delbutton,
+.edit-button {
+  margin-top: 5px;
+  background-color: #e74c3c; /* Red color for delete button, you can change it to your preference */
+  color: white;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.delbutton:hover {
+  background-color: #c0392b;
+}
+
+.edit-button:hover {
+  background-color: #26b152;
+}
+
+.delete,
+.edit {
+  font-size: 16px;
+}

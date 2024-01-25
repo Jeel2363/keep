@@ -1,0 +1,48 @@
+/* CreateNote.css */
+
+.create-note {
+  background-color: #282c35; /* Dark background color for dark mode */
+  border: 1px solid #444; /* Dark border color for dark mode */
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-note.dark-mode {
+  background-color: #282c35;
+  border: 1px solid #444;
+}
+
+.create-note form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-note input,
+.create-note textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444; /* Dark border color for dark mode */
+  border-radius: 4px;
+  background-color: #343a40; /* Dark background color for input fields */
+  color: #ddd; /* Light text color for input fields */
+}
+
+.create-note button {
+  background-color: #007bff; /* Blue color for button */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.create-note button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.create-note.dark-mode button {
+  background-color: #007bff;
+}

@@ -1,0 +1,24 @@
+/* Header.css */
+
+.header {
+    background-color: #2196F3; /* Blue color, you can change it to your preference */
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .dark-mode-btn {
+    background-color: #2196F3; /* Dark gray for the button */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }
+
+ 

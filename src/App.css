@@ -1,0 +1,48 @@
+/* App.css */
+
+body {
+  background-color: #fff; /* Light background color for default mode */
+  color: #333; /* Default text color */
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.create-note,
+.note {
+  background-color: #fff; /* Light background color for default mode */
+  color: #333; /* Default text color */
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+
+.container.dark-mode .create-note,
+.container.dark-mode .note {
+  background-color: #282c35; /* Slightly lighter background color for dark mode */
+  color: #ddd; /* Light text color for dark mode */
+  border-color: 1px #444; /* Dark border color for dark mode */
+}
