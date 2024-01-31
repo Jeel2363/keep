@@ -1,6 +1,6 @@
 // App.jsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
@@ -8,8 +8,30 @@ import CreateNote from './CreateNote.jsx';
 import Note from './Note.jsx';
 
 const App = () => {
-  const [addItem, setAddItem] = useState([]);
+  const getItem = () => {
+    const Note = localStorage.getItem('notes');
+    if (Note) {
+      return JSON.parse(localStorage.getItem('notes'));
+    }
+    else {
+      return [];
+    }
+
+  };
+  const [addItem, setAddItem] = useState(getItem());
   const [darkMode, setDarkMode] = useState(false);
+
+
+  // useEffect(() => {
+  //   const notesFromLocalStorage = localStorage.getItem('notes');
+  //   if (notesFromLocalStorage) {
+  //     setAddItem(JSON.parse(notesFromLocalStorage));
+  //   }
+  // }, []); 
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(addItem));
+  }, [addItem]); // Save notes to local storage whenever addItem changes
 
   const addNote = (note) => {
     setAddItem((prevData) => {
@@ -25,11 +47,11 @@ const App = () => {
     );
   };
 
-  const editNote = (id, updatedtitle,updatedContent) => {
+  const editNote = (id, updatedTitle, updatedContent) => {
     setAddItem((prevData) =>
       prevData.map((note, index) => {
         if (index === id) {
-          return { ...note, title:updatedtitle,content: updatedContent };
+          return { ...note, title: updatedTitle, content: updatedContent };
         }
         return note;
       })
